@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Subtitles to Slides</title>
+</head>
+<body>
+    <h1>📝 Paste Subtitles to Create Google Slides</h1>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    <form method="POST">
+        <textarea name="subtitles" rows="15" cols="80" placeholder="Paste subtitles here..."></textarea><br>
+        <button type="submit">Generate Slides</button>
+    </form>
+</body>
+</html>
